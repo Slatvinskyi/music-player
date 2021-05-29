@@ -99,7 +99,7 @@ body {
   top: 0;
   left: 20px;
 
-  width: calc(100% - 40px); 
+  width: calc(100% - 40px);
   padding: 10px 10px 10px 150px;
   opacity: 0;
   transform: translateY(0%);
@@ -130,6 +130,6 @@ body {
   background-color: #fe8daa;
   border-radius: 5px;
   height: 100%;
-  width: 0%; /* this is to control the progress */
+  width: 0%;
   transition: width 0.1s linear;
 }
