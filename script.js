@@ -91,3 +91,8 @@ nextBtn.addEventListener("click", nextSong)
 audio.addEventListener("timeupdate", updateProgress)
 progressContainer.addEventListener("click", setProgress)
 audio.addEventListener("ended", nextSong)
+const playlist = document.querySelector("#playlist")
+playlist.addEventListener("click", (e) => {
+
+  console.log(e.target.getAttribute("url"));
+});
