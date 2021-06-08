@@ -37,13 +37,70 @@
       <button id='next' class='action-btn'>
         <i class='fas fa-forward'></i>
       </button>
+      
+      <div>
+  <head>
+<style>
+
+li:hover{
+    width:100px;
+    background: #dfdbdf;
+    cursor:pointer;
+    text-decoration: none;
+    border-radius: 20%;
+
+
+}
+</style>
+</head>
+<body>
+  <ul id="playlist">
+  <li url="music/hey.mp3" id='play1'>hey</li>
+  <li url="music/summer.mp3" id='play2'>summer</li>
+  <li url="music/ukulele.mp3" id='play3'>ukulele</li>
+  </ul>
+
+
+<script>
+
+play1.addEventListener("click", () => {
+  loadSong(songs[0])
+  const isPlaying = musicContainer.classList.contains("play")
+if (isPlaying) {
+    pauseSong()
+  } else {
+    playSong()
+  }
+
+});
+
+play2.addEventListener("click", () => {
+  loadSong(songs[1])
+  const isPlaying = musicContainer.classList.contains("play")
+  if (isPlaying) {
+    pauseSong()
+  } else {
+    playSong()
+  }
+});
+
+play3.addEventListener("click", () => {
+  loadSong(songs[2])
+  const isPlaying = musicContainer.classList.contains("play")
+  if (isPlaying) {
+    pauseSong()
+  } else {
+    playSong()
+  }
+});
+
+
+</script>
+</body>
+</div>
 
     </div>
-    <ul class="playlist">
-  <li><a href="music/ukulele.mp3">ukulele</a></li>
-  <li><a href="music/hey.mp3">hey</a></li>
-  <li><a href="music/summer.mp3">summer</a></li>
-    </ul>
+   
 
   </div>
 
