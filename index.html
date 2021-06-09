@@ -46,7 +46,7 @@
   </div>
   
   
-   <div>
+<div>
   <head>
 <style>
 
@@ -56,53 +56,23 @@ li:hover{
     cursor:pointer;
     text-decoration: none;
     border-radius: 20%;
-
-
 }
+  
 </style>
 </head>
 <body>
   <ul id="playlist">
-  <li url="music/hey.mp3" id='play1'>hey</li>
-  <li url="music/summer.mp3" id='play2'>summer</li>
-  <li url="music/ukulele.mp3" id='play3'>ukulele</li>
+  <li url="hey">hey</li>
+  <li url="summer">summer</li>
+  <li url="ukulele">ukulele</li>
   </ul>
 
-
 <script>
-
-play1.addEventListener("click", () => {
-  loadSong(songs[0])
-  const isPlaying = musicContainer.classList.contains("play")
-if (isPlaying) {
-    pauseSong()
-  } else {
-    playSong()
-  }
-
+const playlist = document.querySelector("#playlist")
+playlist.addEventListener("click", (e) => {
+  loadSong(e.target.getAttribute('url'));
 });
-
-play2.addEventListener("click", () => {
-  loadSong(songs[1])
-  const isPlaying = musicContainer.classList.contains("play")
-  if (isPlaying) {
-    pauseSong()
-  } else {
-    playSong()
-  }
-});
-
-play3.addEventListener("click", () => {
-  loadSong(songs[2])
-  const isPlaying = musicContainer.classList.contains("play")
-  if (isPlaying) {
-    pauseSong()
-  } else {
-    playSong()
-  }
-});
-
-
+  
 </script>
 </body>
 </div>
