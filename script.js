@@ -84,6 +84,21 @@ playBtn.addEventListener("click", () => {
     playSong()
   }
 });
+// playlist 
+const playlist = document.querySelector("#playlist")
+playlist.addEventListener("click", (e) => {
+loadSong(e.target.getAttribute('url'));
+
+});
+
+playlist.addEventListener("click", () => {
+  const isPlaying = musicContainer.classList.contains("play")
+  if (isPlaying) {
+    playSong()
+  } else {
+    playSong()
+  }
+});
 
 // change song
 prevBtn.addEventListener("click", prevSong)
