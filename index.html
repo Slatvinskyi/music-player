@@ -78,7 +78,7 @@ loadSong(e.target.getAttribute('url'));
 playlist.addEventListener("click", () => {
   const isPlaying = musicContainer.classList.contains("play")
   if (isPlaying) {
-    pauseSong()
+    playSong()
   } else {
     playSong()
   }
