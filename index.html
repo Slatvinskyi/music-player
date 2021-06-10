@@ -46,48 +46,36 @@
   </div>
   
   
-<div>
-  <head>
+<div class='playlist-container'>
+
 <style>
 
 li:hover{
     width:100px;
-    background: #dfdbdf;
+    background: linear-gradient(0deg, rgb(247, 247,247) 23.8%, rgb(252, 221, 221) 92%);
     cursor:pointer;
     text-decoration: none;
-    border-radius: 20%;
+    border-radius: 15%;
 }
-  
+
+.playlist-container {
+  background: #fff;
+  border-radius: 15px;
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+  box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
+}
+
 </style>
-</head>
+
 <body>
+  
   <ul id="playlist">
-  <li url="hey">hey</li>
-  <li url="summer">summer</li>
-  <li url="ukulele">ukulele</li>
+  <li url="hey" id='currentSong'>hey</li>
+  <li url="summer" id='currentSong'>summer</li>
+  <li url="ukulele" id='currentSong'>ukulele</li>
   </ul>
 
-<script>
-
-const playlist = document.querySelector("#playlist")
-playlist.addEventListener("click", (e) => {
-loadSong(e.target.getAttribute('url'));
-
-});
-
-playlist.addEventListener("click", () => {
-  const isPlaying = musicContainer.classList.contains("play")
-  if (isPlaying) {
-    playSong()
-  } else {
-    playSong()
-  }
-});
-
-
-</script>
-</body>
-</div>
   
  </div>
 </div>
