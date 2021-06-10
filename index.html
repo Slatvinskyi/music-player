@@ -68,11 +68,23 @@ li:hover{
   </ul>
 
 <script>
+
 const playlist = document.querySelector("#playlist")
 playlist.addEventListener("click", (e) => {
-  loadSong(e.target.getAttribute('url'));
+loadSong(e.target.getAttribute('url'));
+
 });
-  
+
+playlist.addEventListener("click", () => {
+  const isPlaying = musicContainer.classList.contains("play")
+  if (isPlaying) {
+    pauseSong()
+  } else {
+    playSong()
+  }
+});
+
+
 </script>
 </body>
 </div>
